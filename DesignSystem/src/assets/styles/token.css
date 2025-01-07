@@ -1,0 +1,40 @@
+:root {
+    /* Couleurs */
+    --color-dark-pink-600: #c23350;
+    --color-dark-pink-500: #e15c7c;
+    --color-dark-pink-400: #f4bbc9;
+    --color-dark-brown-600: #8a6161;
+    --color-dark-brown-400: #a47979;
+    --color-light-brown-200: #fae6e7;
+    --color-light-brown-100: #fff6f6;
+    --color-wrong-red: #ff0000;
+    --color-white: #ffffff;
+    --color-black: #000000;
+  
+    /* Typographie */
+    --font-family-primary: 'Lucida Grande', sans-serif;
+    --font-family-secondary: 'Inter', sans-serif;
+    --font-family-tertiary: 'Julius Sans One', sans-serif;
+  
+    /* Titres */
+    --font-title-l: 32px;
+    --font-title-m: 24px;
+    --font-title-s: 20px;
+    --font-title-thin: 35px;
+  
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+    --font-weight-semi-bold: 600;
+  
+    /* Corps du texte */
+    --font-body-xs: 12px;
+    --font-body-s: 14px;
+    --font-body-m: 16px;
+    --font-body-l: 20px;
+    --font-body-xl: 24px;
+  
+    /* Divers */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+  }
+  
