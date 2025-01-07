@@ -26,7 +26,7 @@ Membres du groupe :
 
 1. Clonez le dépôt :
     ```bash
-    git clone [https://github.com/Alexis-Gontier/projet-react](https://github.com/arthurGuillemin/design_system
+    git clone [https://github.com/arthurGuillemin/design_system](https://github.com/arthurGuillemin/design_system)
     ```
 
 2. Accédez au répertoire du projet :
