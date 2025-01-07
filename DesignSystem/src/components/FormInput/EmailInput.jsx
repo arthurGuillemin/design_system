@@ -1,38 +1,27 @@
 import React, { useState } from 'react';
 import styles from './EmailInput.module.css';
 
-const EmailInput = ({ label }) => {
-  const [email, setEmail] = useState('');
-  const [error, setError] = useState('');
+const EmailInput = ({ label = "Email", error = "", value = "", onChange }) => {
+  const [focused, setFocused] = useState(false);
 
-  const validateEmail = (value) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(value)) {
-      setError('Votre Email est invalide');
-    } else {
-      setError('');
-    }
-  };
-
-  const handleChange = (e) => {
-    setEmail(e.target.value);
-    validateEmail(e.target.value);
-  };
+  const handleFocus = () => setFocused(true);
+  const handleBlur = () => setFocused(false);
 
   return (
-    <div className={styles.emailInputContainer}>
-      <label className={styles.emailLabel}>{label}</label>
+    <div className={styles.container}>
+      <label className={styles.label}>{label}</label>
       <div className={styles.inputWrapper}>
         <input
           type="email"
-          className={`${styles.emailInput} ${error ? styles.inputError : ''}`}
-          placeholder="Email"
-          value={email}
-          onChange={handleChange}
+          className={`${styles.input} ${error ? styles.error : ""} ${focused ? styles.focused : ""}`}
+          placeholder={label}
+          value={value}
+          onChange={onChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
         />
-        <span className={styles.inputIcon}>📧</span>
       </div>
-      {error && <p className={styles.errorText}>❗ {error}</p>}
+      {error && <p className={styles.errorText}>{error}</p>}
     </div>
   );
 };

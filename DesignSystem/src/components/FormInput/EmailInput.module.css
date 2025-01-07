@@ -1,49 +1,43 @@
-.emailInputContainer {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 16px;
-  }
-  
-  .emailLabel {
-    font-size: 14px;
-    color: #a47979;
-    margin-bottom: 8px;
-  }
-  
-  .inputWrapper {
-    position: relative;
-  }
-  
-  .emailInput {
-    width: 100%;
-    padding: 10px 40px 10px 12px;
-    border: 1px solid #a47979;
-    border-radius: 25px;
-    font-size: 14px;
-    color: #333;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
-  
-  .emailInput:focus {
-    border-color: #c23350;
-  }
-  
-  .inputError {
-    border-color: #ff0000;
-  }
-  
-  .inputIcon {
-    position: absolute;
-    top: 50%;
-    right: 12px;
-    transform: translateY(-50%);
-    color: #a47979;
-  }
-  
-  .errorText {
-    font-size: 12px;
-    color: #ff0000;
-    margin-top: 4px;
-  }
-  
+@import '@/assets/styles/tokens.css';
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.label {
+  font-size: var(--font-size-placeholder);
+  color: var(--color-dark-brown-400);
+  margin-bottom: 8px;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-dark-brown-400);
+  border-radius: 25px;
+  font-size: var(--font-size-placeholder);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input.focused {
+  border-color: var(--color-dark-pink-600);
+  box-shadow: 0 0 5px rgba(194, 51, 80, 0.5);
+}
+
+.input.error {
+  border-color: var(--color-wrong-red);
+}
+
+.errorText {
+  font-size: var(--font-size-small-error);
+  color: var(--color-wrong-red);
+  margin-top: 4px;
+}
