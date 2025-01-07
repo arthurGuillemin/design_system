@@ -1,0 +1,17 @@
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: var(--spacing-large);
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  h1 {
+    color: var(--dark-pink-600);
+  }
+  
+  p {
+    color: var(--dark-brown-600);
+  }
+  

@@ -1,0 +1,19 @@
+.login-page {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: var(--spacing-large);
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+  }
+  
+  .title {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-h1);
+    color: var(--text-color-primary);
+    margin-bottom: var(--spacing-large);
+  }
+  

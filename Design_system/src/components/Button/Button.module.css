@@ -1,0 +1,16 @@
+.button {
+    padding: var(--spacing-base);
+    font-size: var(--font-size-body);
+    font-family: var(--font-primary);
+    color: var(--white);
+    background-color: var(--dark-pink-600);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--dark-pink-500);
+  }
+  

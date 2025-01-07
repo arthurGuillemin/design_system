@@ -1,0 +1,7 @@
+.content {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-large);
+    margin: var(--spacing-large);
+  }
+  

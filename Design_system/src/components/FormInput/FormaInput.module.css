@@ -1,0 +1,16 @@
+.form-input {
+    width: 100%;
+    padding: var(--spacing-base);
+    font-size: var(--font-size-body);
+    font-family: var(--font-primary);
+    color: var(--text-color-primary);
+    border: 1px solid var(--text-color-placeholder);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-large);
+  }
+  
+  .form-input:focus {
+    border-color: var(--text-color-primary);
+    outline: none;
+  }
+  
