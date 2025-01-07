@@ -1,16 +1,48 @@
+@import "../../assets/styles/token.css";
+
+.form-input-container {
+  margin-bottom: 20px;
+}
+
+.form-input-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: var(--font-size-small-error);
+  color: var(--text-color-placeholder);
+}
+
+.form-input-wrapper {
+  position: relative;
+}
+
 .form-input {
-    width: 100%;
-    padding: var(--spacing-base);
-    font-size: var(--font-size-body);
-    font-family: var(--font-primary);
-    color: var(--text-color-primary);
-    border: 1px solid var(--text-color-placeholder);
-    border-radius: var(--border-radius);
-    margin-bottom: var(--spacing-large);
-  }
-  
-  .form-input:focus {
-    border-color: var(--text-color-primary);
-    outline: none;
-  }
-  
+  width: 100%;
+  padding: 10px 15px;
+  font-size: var(--font-size-placeholder);
+  border: 1px solid #a47979;
+  border-radius: 25px;
+  outline: none;
+  box-sizing: border-box;
+  color: var(--text-color-primary);
+  background-color: #fff;
+}
+
+.form-input:focus {
+  border-color: #c23350;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #a47979;
+}
+
+.form-input-error {
+  color: var(--text-color-error);
+  font-size: var(--font-size-small-error);
+  margin-top: 5px;
+  display: block;
+}

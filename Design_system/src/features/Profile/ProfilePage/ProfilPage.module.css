@@ -1,17 +1,38 @@
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: var(--spacing-large);
-    background-color: var(--white);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-  }
-  
-  h1 {
-    color: var(--dark-pink-600);
-  }
-  
-  p {
-    color: var(--dark-brown-600);
-  }
-  
+@import "../../assets/styles/token.css";
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fff6f6;
+  padding: 20px;
+}
+
+.profile-title {
+  font-size: var(--font-size-h1);
+  color: #c23350;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: var(--font-size-light-text);
+  color: #333333;
+}
+
+.edit-profile-button {
+  background-color: #c23350;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: var(--font-size-rounded-button-sm);
+  cursor: pointer;
+}
+
+.edit-profile-button:hover {
+  background-color: #e15c7c;
+}

@@ -4,4 +4,40 @@
     gap: var(--spacing-large);
     margin: var(--spacing-large);
   }
+  @import "../../assets/styles/token.css";
+
+  .main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff6f6;
+    text-align: center;
+  }
+  
+  .main-title {
+    font-size: var(--font-size-h1);
+    color: #c23350;
+    margin-bottom: 30px;
+  }
+  
+  .main-navigation ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .main-navigation li {
+    margin: 10px 0;
+  }
+  
+  .main-link {
+    font-size: var(--font-size-rounded-button-sm);
+    color: #c23350;
+    text-decoration: none;
+  }
+  
+  .main-link:hover {
+    text-decoration: underline;
+  }
   
