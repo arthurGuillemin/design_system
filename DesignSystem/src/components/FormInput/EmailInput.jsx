@@ -21,7 +21,7 @@ const EmailInput = ({ label = "Email", error = "", value = "", onChange }) => {
           onBlur={handleBlur}
         />
       </div>
-      {error && <p className={styles.errorText}>{error}</p>}
+      {error && <p className={styles.errorText}>❗ {error}</p>}
     </div>
   );
 };
