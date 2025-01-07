@@ -1,9 +1,0 @@
-.header {
-    padding: var(--spacing-large);
-    background-color: var(--dark-pink-600);
-    color: var(--white);
-    text-align: center;
-    font-size: var(--font-size-large);
-    box-shadow: var(--box-shadow);
-  }
-  
