@@ -1,0 +1,75 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.inputLabel {
+  color: var(--color-dark-brown-600);
+  font-size: var(--font-body-m);
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-dark-brown-600);
+  border-radius: 50px;
+  background-color: var(--color-white);
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--color-dark-pink-600);
+  box-shadow: 0 0 var(--spacing-3) rgba(194, 51, 80, 0.4);
+}
+
+.inputField {
+  flex: 1; /* Permet à l'input de prendre tout l'espace disponible */
+}
+
+.roundedInput {
+  width: 100%;
+  font-size: var(--font-body-m);
+  padding: var(--spacing-5) var(--spacing-12) var(--spacing-5) var(--spacing-12);
+  border: none;
+  outline: none;
+  background: transparent; /* Pour garder la bordure uniforme du parent */
+}
+
+.roundedInput::placeholder {
+  color: var(--color-dark-brown-400);
+  font-size: var(--font-body-s);
+}
+
+.inputError {
+  border-color: var(--color-wrong-red);
+}
+
+.errorMessage {
+  color: var(--color-wrong-red);
+  font-size: var(--font-body-s);
+  margin-bottom: var(--spacing-2);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Taille spécifique pour l'icône */
+  height: 40px;
+  margin-right: var(--spacing-5);
+}
+
+.iconWrapper button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.iconWrapper img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
