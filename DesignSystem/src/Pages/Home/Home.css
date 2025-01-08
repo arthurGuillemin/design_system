@@ -1,0 +1,53 @@
+@import "../../assets/styles/tokens.css";
+
+:root {
+  background-color: var(--color-light-brown-100);
+}
+
+.home-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.home-image {
+  width: 100%;
+  max-width: 1290px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 80px;
+}
+
+.home-presentation {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  background-color:var(--color-light-brown-100);
+  color: var(--color-black);
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+  text-align: center;
+}
+
+.home-presentation h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.home-button {
+  padding: 10px 20px;
+  background-color: var(--color-dark-brown-600);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #b30047;
+}
