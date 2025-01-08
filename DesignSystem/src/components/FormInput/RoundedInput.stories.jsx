@@ -5,30 +5,12 @@ export default {
   title: 'Components/FormInput/RoundedInput',
   component: RoundedInput,
   argTypes: {
-    label: {
-      control: { type: 'text' },
-      defaultValue: 'Label',
-    },
-    placeholder: {
-      control: { type: 'text' },
-      defaultValue: 'This is a placeholder',
-    },
-    type: {
-      control: { type: 'text' },
-      defaultValue: 'text',
-    },
-    error: {
-      control: { type: 'boolean' },
-      defaultValue: false,
-    },
-    errorMessage: {
-      control: { type: 'text' },
-      defaultValue: 'This is an error message',
-    },
-    isPassword: {
-      control: { type: 'boolean' },
-      defaultValue: false,
-    },
+    label: { control: 'text', defaultValue: 'Label' },
+    placeholder: { control: 'text', defaultValue: 'Enter your text...' },
+    type: { control: 'text', defaultValue: 'text' },
+    error: { control: 'boolean', defaultValue: false },
+    errorMessage: { control: 'text', defaultValue: 'Error message' },
+    isPassword: { control: 'boolean', defaultValue: false },
   },
 };
 
@@ -36,25 +18,25 @@ const Template = (args) => <RoundedInput {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: 'Label',
-  placeholder: 'This is a placeholder',
+  label: 'Default Input',
+  placeholder: 'Enter your text...',
   error: false,
   errorMessage: '',
 };
 
-export const PasswordVisible = Template.bind({});
-PasswordVisible.args = {
+export const PasswordField = Template.bind({});
+PasswordField.args = {
   label: 'Password',
   placeholder: 'Enter your password',
   isPassword: true,
   error: false,
+  errorMessage: '',
 };
 
-export const PasswordError = Template.bind({});
-PasswordError.args = {
-  label: 'Password',
-  placeholder: 'Enter your password',
-  isPassword: true,
+export const ErrorState = Template.bind({});
+ErrorState.args = {
+  label: 'Input with Error',
+  placeholder: 'Enter your text...',
   error: true,
-  errorMessage: 'Password is incorrect',
+  errorMessage: 'This field is required.',
 };

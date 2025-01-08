@@ -9,10 +9,7 @@ import PressedArrowIcon from '../../assets/icons/arrow_forward_ios2.svg';
 import DefaultPasswordIcon from '../../assets/icons/Password-Visibility=Default.svg';
 import PressedPasswordIcon from '../../assets/icons/Password-Visibility=Clicked.svg';
 
-
 const IconButton = ({ type, alt, onClick, isActive }) => {
-  const [isPressed, setIsPressed] = useState(false);
-
   const iconSets = {
     account: { default: DefaultAccountIcon, pressed: PressedAccountIcon },
     arrow: { default: PressedArrowIcon, pressed: DefaultArrowIcon },
@@ -20,18 +17,10 @@ const IconButton = ({ type, alt, onClick, isActive }) => {
   };
   const icons = iconSets[type] || iconSets['account'];
 
-  const handleMouseDown = () => setIsPressed(true);
-  const handleMouseUp = () => setIsPressed(false);
-
   return (
-    <button
-      className="icon-button"
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
-      onClick={onClick}
-    >
+    <button className="icon-button" onClick={onClick}>
       <img
-        src={isActive || isPressed ? icons.pressed : icons.default}
+        src={isActive ? icons.pressed : icons.default} 
         alt={alt}
         className="icon-image"
       />

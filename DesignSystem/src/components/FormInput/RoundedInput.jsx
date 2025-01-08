@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import styles from './RoundedInput.module.css';
+import IconButton from '../IconBtn/IconButton';
 
 const RoundedInput = ({
   label,
@@ -17,26 +19,47 @@ const RoundedInput = ({
 
   return (
     <div className={styles.inputContainer}>
-      <label className={styles.inputLabel}>{label}</label>
+      {label && <label className={styles.inputLabel}>{label}</label>}
       {error && <p className={styles.errorMessage}>{errorMessage}</p>}
       <div className={styles.inputWrapper}>
-        <input
-          type={isPassword && !passwordVisible ? 'password' : type}
-          className={`${styles.roundedInput} ${error ? styles.inputError : ''}`}
-          placeholder={placeholder}
-        />
+        <div className={styles.inputField}>
+          <input
+            type={isPassword && !passwordVisible ? 'password' : type}
+            className={`${styles.roundedInput} ${error ? styles.inputError : ''}`}
+            placeholder={placeholder}
+          />
+        </div>
         {isPassword && (
-          <button
-            type="button"
-            className={styles.visibilityToggle}
-            onClick={togglePasswordVisibility}
-          >
-            {passwordVisible ? '👁️‍🗨️' : '🙈'}
-          </button>
+          <div className={styles.iconWrapper}>
+            <IconButton
+              type="password"
+              alt={passwordVisible ? 'Hide password' : 'Show password'}
+              onClick={togglePasswordVisibility}
+              isActive={passwordVisible}
+            />
+          </div>
         )}
       </div>
     </div>
   );
+};
+
+RoundedInput.propTypes = {
+  label: PropTypes.string,
+  placeholder: PropTypes.string,
+  type: PropTypes.string,
+  error: PropTypes.bool,
+  errorMessage: PropTypes.string,
+  isPassword: PropTypes.bool,
+};
+
+RoundedInput.defaultProps = {
+  label: '',
+  placeholder: 'Enter text...',
+  type: 'text',
+  error: false,
+  errorMessage: '',
+  isPassword: false,
 };
 
 export default RoundedInput;
