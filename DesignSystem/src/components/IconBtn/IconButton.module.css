@@ -1,8 +1,10 @@
 .icon-button {
-  background-color: transparent;
+  background-color: none;
   border: none;
   padding: 8px;
-  transition: transform 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-button:active {

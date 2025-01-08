@@ -1,0 +1,63 @@
+@import '../../assets/styles/tokens.css';
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3); /* Espacement entre le label, l'input et le message d'erreur */
+}
+
+.inputLabel {
+  color: var(--color-dark-brown-600);
+  font-size: var(--font-body-m);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.roundedInput {
+  width: 100%;
+  border: 1px solid var(--color-dark-brown-600);
+  background-color: var(--color-white);
+  border-radius: 50px; /* Coins arrondis fluides */
+  font-size: var(--font-body-m);
+  padding: var(--spacing-5) var(--spacing-12); /* Espacement interne */
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roundedInput::placeholder {
+  color: var(--color-dark-brown-400);
+  font-size: var(--font-body-s);
+}
+
+.roundedInput:focus {
+  border-color: var(--color-dark-pink-600);
+  box-shadow: 0 0 var(--spacing-3) rgba(194, 51, 80, 0.4);
+}
+
+.inputError {
+  border-color: var(--color-wrong-red);
+}
+
+.errorMessage {
+  color: var(--color-wrong-red);
+  font-size: var(--font-body-s);
+  margin-bottom: var(--spacing-2);
+}
+
+.visibilityToggle {
+  position: absolute;
+  right: var(--spacing-5);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-body-m);
+  color: var(--color-dark-brown-600);
+}
+
+.visibilityToggle:focus {
+  outline: none;
+}

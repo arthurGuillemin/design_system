@@ -1,14 +1,17 @@
 import React from 'react';
-import EmailInput from './components/FormInput/EmailInput';
-
+import RoundedInput from './components/FormInput/RoundedInput';
 const App = () => {
   return (
     <div>
-      <form>
-        <EmailInput label="Adresse Email" />
-        {/* Ajoutez d'autres champs de formulaire si nécessaire */}
-        <button type="submit">Soumettre</button>
-      </form>
+<form >
+      <RoundedInput
+        label="Email"
+        placeholder="Email"
+        error={true}
+        errorMessage="This is an error message"
+        isPassword={false}
+      />
+    </form>
     </div>
   );
 };
