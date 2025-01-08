@@ -5,58 +5,41 @@ export default {
   title: 'Components/Button',
   component: Button,
   argTypes: {
-    variant: {
-      control: { type: 'select' },
-      options: ['default', 'outline', 'small-white'], // Les variantes disponibles
+    children: { control: 'text', defaultValue: 'Label' },
+    variant: { 
+      control: { type: 'radio' }, 
+      options: ['default', 'active', 'focus'], 
+      defaultValue: 'default' 
     },
-    width: {
-      control: { type: 'select' },
-      options: ['full-width', 'medium-width', 'small-width'], // Les tailles disponibles
+    size: { 
+      control: { type: 'radio' }, 
+      options: ['slim', 'large'], 
+      defaultValue: 'slim' 
     },
-    disabled: {
-      control: { type: 'boolean' },
+    width: { 
+      control: { type: 'radio' }, 
+      options: ['full-width', 'medium-width', 'small-width'], 
+      defaultValue: 'medium-width' 
     },
+    disabled: { control: 'boolean', defaultValue: false },
+    icon: { control: 'text', defaultValue: '➤' },
   },
 };
 
-const Template = (args) => <Button {...args}>{args.label}</Button>;
+const Template = (args) => <Button {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-  label: 'Default Button',
+export const Slim = Template.bind({});
+Slim.args = {
+  children: 'Label',
   variant: 'default',
-  width: 'medium-width',
-  disabled: false,
+  size: 'slim',
+  icon: '➤',
 };
 
-export const Outline = Template.bind({});
-Outline.args = {
-  label: 'Outline Button',
-  variant: 'outline',
-  width: 'medium-width',
-  disabled: false,
-};
-
-export const SmallWhite = Template.bind({});
-SmallWhite.args = {
-  label: 'Small White Button',
-  variant: 'small-white',
-  width: 'small-width',
-  disabled: false,
-};
-
-export const FullWidth = Template.bind({});
-FullWidth.args = {
-  label: 'Full Width Button',
+export const Large = Template.bind({});
+Large.args = {
+  children: 'Label',
   variant: 'default',
-  width: 'full-width',
-  disabled: false,
-};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-  label: 'Disabled Button',
-  variant: 'default',
-  width: 'medium-width',
-  disabled: true,
+  size: 'large',
+  icon: '➤',
 };

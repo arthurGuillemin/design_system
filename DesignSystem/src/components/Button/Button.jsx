@@ -5,9 +5,11 @@ const Button = ({
   children,
   onClick,
   type = 'button',
-  variant = 'default',
-  width = 'medium-width', // Taille par défaut
+  variant = 'default', // Variantes comme default, active, focus
+  size = 'slim', // Tailles comme slim, large
+  width = 'medium-width',
   disabled = false,
+  icon = null,
 }) => {
   const [focused, setFocused] = useState(false);
 
@@ -17,15 +19,16 @@ const Button = ({
   return (
     <button
       type={type}
-      className={`${styles.button} ${styles[variant]} ${styles[width]} ${
-        disabled ? styles.disabled : ''
-      } ${focused ? styles.focus : ''}`}
+      className={`${styles.button} ${styles[variant]} ${styles[size]} ${
+        focused ? styles.focus : ''
+      } ${disabled ? styles.disabled : ''}`}
       onClick={onClick}
       onFocus={handleFocus}
       onBlur={handleBlur}
       disabled={disabled}
     >
-      {children}
+      <span>{children}</span>
+      {icon && <span className={styles.icon}>{icon}</span>}
     </button>
   );
 };

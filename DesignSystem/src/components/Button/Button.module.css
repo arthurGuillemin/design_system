@@ -6,67 +6,49 @@
   font-weight: var(--font-weight-semi-bold);
   border: none;
   cursor: pointer;
-  border-radius: 9999px; /* Coins arrondis fluides */
-  height: var(--spacing-12); /* Hauteur fixe */
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0 var(--spacing-12); /* Padding horizontal */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  justify-content: space-between;
+  padding: 0 var(--spacing-8); /* Padding horizontal */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+
 }
 
-.button:hover {
-  box-shadow: 0 0 var(--spacing-3) rgba(194, 51, 80, 0.4);
-}
-
-.button:disabled {
-  background-color: var(--color-light-brown-200);
-  color: var(--color-dark-brown-400);
-  cursor: not-allowed;
-}
-
-.button:focus {
-  outline: none;
-  box-shadow: 0 0 var(--spacing-5) rgba(194, 51, 80, 0.8);
-}
-
-/* Variantes */
+/* Variantes spécifiques */
 .default {
   background-color: var(--color-dark-pink-600);
   color: var(--color-white);
 }
 
-.outline {
-  background-color: transparent;
-  border: 2px solid var(--color-dark-pink-600);
+.default:hover {
+  background-color: var(--color-dark-pink-500);
+}
+
+.active {
+  background-color: var(--color-light-brown-200);
   color: var(--color-dark-pink-600);
 }
 
-.outline:hover {
-  background-color: var(--color-dark-pink-500);
+.focus {
+  background-color: var(--color-dark-pink-600);
+  border: 2px solid var(--color-black);
   color: var(--color-white);
 }
 
-.small-white {
-  background-color: var(--color-white);
-  border: 2px solid var(--color-dark-pink-600);
-  color: var(--color-dark-pink-600);
+/* Tailles */
+.slim {
+  height: var(--spacing-9); /* Hauteur pour les boutons "slim" */
+  font-size: var(--font-body-s);
+  border-radius: 50px;
 }
 
-.small-white:hover {
-  background-color: var(--color-dark-pink-500);
-  color: var(--color-white);
+.large {
+  height: var(--spacing-20); /* Hauteur pour les boutons "large" */
+  font-size: var(--font-body-l);
 }
 
-/* Largeurs */
-.full-width {
-  width: 100%;
-}
-
-.medium-width {
-  width: var(--spacing-67);
-}
-
-.small-width {
-  width: var(--spacing-45-5);
+/* Icônes */
+.icon {
+  font-size: var(--font-body-m);
+  margin-left: var(--spacing-5); /* Espacement entre texte et icône */
 }
