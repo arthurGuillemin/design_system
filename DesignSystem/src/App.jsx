@@ -1,11 +1,14 @@
-import React from 'react';
-import RoundedInput from './components/FormInput/RoundedInput';
-const App = () => {
-  return (
-    <div>
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
 
-    </div>
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;

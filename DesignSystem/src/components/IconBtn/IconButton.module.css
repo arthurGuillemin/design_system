@@ -1,10 +1,13 @@
 .icon-button {
-  background-color: none;
+  background-color: transparent;
   border: none;
-  padding: 8px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
 }
 
 .icon-button:active {
@@ -12,6 +15,7 @@
 }
 
 .icon-image {
-  width: 60px;
-  height: 60px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }

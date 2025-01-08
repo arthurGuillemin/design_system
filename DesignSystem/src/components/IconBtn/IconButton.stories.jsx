@@ -1,10 +1,25 @@
-
 import IconButton from './IconButton';
 
 export default {
   title: 'Components/IconButton',
   component: IconButton,
   argTypes: {
+    type: {
+      control: {
+        type: 'select',
+        options: ['account', 'arrow', 'password'],
+      },
+    },
+    isActive: {
+      control: {
+        type: 'boolean',
+      },
+    },
+    alt: {
+      control: {
+        type: 'text',
+      },
+    },
     onClick: { action: 'clicked' },
   },
 };
@@ -52,4 +67,3 @@ PasswordActive.args = {
   alt: 'Password Icon (Active)',
   isActive: true,
 };
-

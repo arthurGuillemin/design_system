@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import './IconButton.module.css';
+import styles from './IconButton.module.css';
 
 import DefaultAccountIcon from '../../assets/icons/Account=Default.svg';
 import PressedAccountIcon from '../../assets/icons/Account=Account.svg';
@@ -10,19 +10,30 @@ import DefaultPasswordIcon from '../../assets/icons/Password-Visibility=Default.
 import PressedPasswordIcon from '../../assets/icons/Password-Visibility=Clicked.svg';
 
 const IconButton = ({ type, alt, onClick, isActive }) => {
+  const [isPressed, setIsPressed] = useState(false);
+
   const iconSets = {
     account: { default: DefaultAccountIcon, pressed: PressedAccountIcon },
-    arrow: { default: PressedArrowIcon, pressed: DefaultArrowIcon },
+    arrow: { default: DefaultArrowIcon, pressed: PressedArrowIcon },
     password: { default: DefaultPasswordIcon, pressed: PressedPasswordIcon },
   };
+
   const icons = iconSets[type] || iconSets['account'];
 
+  const handleMouseDown = () => setIsPressed(true);
+  const handleMouseUp = () => setIsPressed(false);
+
   return (
-    <button className="icon-button" onClick={onClick}>
+    <button
+      className={styles['icon-button']}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onClick={onClick}
+    >
       <img
-        src={isActive ? icons.pressed : icons.default} 
+        src={isActive || isPressed ? icons.pressed : icons.default}
         alt={alt}
-        className="icon-image"
+        className={styles['icon-image']}
       />
     </button>
   );
