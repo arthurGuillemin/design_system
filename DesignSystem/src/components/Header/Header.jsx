@@ -1,17 +1,17 @@
 import React from 'react';
 import styles from './Header.module.css';
-import logo from '../../assets/images/logo.svg'; // Replace with the path to your logo image
-import profileIcon from '../../assets/images/profile-icon.svg'; // Replace with the path to your profile icon
+import { ReactComponent as Logo } from '../../assets/icons/Logo.svg'; // Import SVG as React Component
+import { ReactComponent as AccountIcon } from '../../assets/icons/Account.svg';
 
 const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
-        <img src={logo} alt="Bloom Logo" className={styles.logo} />
-        <span className={styles.title}>BLOOM</span>
+        <Logo className={styles.logo} />
+        <h1 className={styles.title}>BLOOM</h1>
       </div>
-      <div className={styles.profileIconContainer}>
-        <img src={profileIcon} alt="Profile Icon" className={styles.profileIcon} />
+      <div className={styles.accountContainer}>
+        <AccountIcon className={styles.accountIcon} />
       </div>
     </header>
   );

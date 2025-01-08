@@ -1,0 +1,42 @@
+@import '../../assets/styles/tokens.css';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-light-brown-200);
+    padding: var(--spacing-8) var(--spacing-12);
+    border-radius: var(--spacing-3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: var(--spacing-3);
+  }
+  
+  .title {
+    font-family: var(--font-family-tertiary);
+    font-size: var(--font-title-m);
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--color-dark-pink-600);
+  }
+  
+  .accountContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .accountIcon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    color: var(--color-dark-brown-400);
+  }
+  
