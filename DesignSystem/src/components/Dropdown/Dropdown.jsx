@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import styles from "./Dropdown.module.css"; // Utilisation des modules CSS
+import styles from "./Dropdown.module.css"; 
+
 
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,12 +12,12 @@ const Dropdown = () => {
   return (
     <div className={styles["dropdown-container"]}>
       <button className={styles["dropdown-button"]} onClick={toggleDropdown}>
-        Test
+        test
       </button>
 
       {isOpen && (
         <ul className={styles["dropdown-list"]}>
-          {[1, 2, 3, 4].map((item) => (
+          {['mon panier', 'parametre', 'aides & contact'].map((item) => (
             <li
               key={item}
               className={styles["dropdown-list-item"]}
