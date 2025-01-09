@@ -1,35 +1,34 @@
 import React, { useState } from "react";
-import "./Dropdown.module.css";
+import styles from "./Dropdown.module.css"; // Utilisation des modules CSS
 
 const Dropdown = () => {
-    const [isOpen, setIsOpen] = useState(false);
-  
-    const toggleDropdown = () => {
-      setIsOpen(!isOpen);
-    };
-  
-    return (
-      <div className="dropdown-container">
-        <button className="dropdown-button" onClick={toggleDropdown}>
-          Test
-        </button>
-  
-        {isOpen && (
-          <ul className="dropdown-list">
-            {[1, 2, 3, 4].map((item) => (
-              <li
-                key={item}
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    );
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
   };
-  
-  export default Dropdown;
+
+  return (
+    <div className={styles["dropdown-container"]}>
+      <button className={styles["dropdown-button"]} onClick={toggleDropdown}>
+        Test
+      </button>
+
+      {isOpen && (
+        <ul className={styles["dropdown-list"]}>
+          {[1, 2, 3, 4].map((item) => (
+            <li
+              key={item}
+              className={styles["dropdown-list-item"]}
+              onClick={() => setIsOpen(false)}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+export default Dropdown;
