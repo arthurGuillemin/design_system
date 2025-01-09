@@ -31,9 +31,9 @@
 }
 
 .focus {
-  border: 2px solid var(--color-dark-pink-500);
+  border: 2px solid var(--color-black);
   box-shadow: 0 0 0 3px var(--color-dark-pink-300);
-  color: var(--color-dark-pink-500);
+  color: var(--color-dark-pink-400);
 }
 
 .disabled {
