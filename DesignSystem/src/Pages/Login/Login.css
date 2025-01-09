@@ -1,4 +1,3 @@
-@import '../../assets/styles/tokens.css';
 .Login-container {
   display: flex;
   flex-direction: row-reverse;
@@ -38,6 +37,44 @@ form {
   width: 100%;
 }
 
+/* Responsive  */
+@media (max-width: 768px) {
+  .Login-container {
+    flex-direction: column; 
+    justify-content: center;
+  }
 
+  .Login-container img {
+    display: none;
+  }
 
+  .Login-content {
+    width: 100%;
+    padding: 20px; 
+  }
 
+  h1 {
+    font-size: var(--font-title-m); 
+    text-align: center;
+    width: 100%;
+  }
+
+  form {
+    gap: 15px;
+    padding: 0; 
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: var(--font-title-s);
+  }
+
+  form {
+    gap: 10px;
+  }
+
+  .Login-content {
+    padding: 10px;
+  }
+}
