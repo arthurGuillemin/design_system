@@ -4,10 +4,10 @@ import styles from './IconButton.module.css';
 
 import DefaultAccountIcon from '../../assets/icons/Account=Default.svg';
 import PressedAccountIcon from '../../assets/icons/Account=Account.svg';
-import DefaultArrowIcon from '../../assets/icons/arrow_forward_ios.svg';
 import DefaultPasswordIcon from '../../assets/icons/Password-Visibility=Default.svg';
 import PressedPasswordIcon from '../../assets/icons/Password-Visibility=Clicked.svg';
-import PressedArrowIcon from '../../assets/icons/arrow_forward_ios2.svg'
+import PressedArrowIcon from '../../assets/icons/arrow_forward_ios.svg';
+import DefaultArrowIcon from '../../assets/icons/arrow_forward_ios2.svg';
 const IconButton = ({ type, alt, onClick, isActive }) => {
   const [isPressed, setIsPressed] = useState(false);
 
