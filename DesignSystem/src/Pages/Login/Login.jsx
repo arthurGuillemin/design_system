@@ -13,10 +13,13 @@ function LoginPage() {
       <div className="Login-container">
         <img src={imgLogin} alt="Background" />
         <div className="Login-content">
-          <h1>Connectez-vous</h1>
+          <h1>Connectez vous</h1>
           <form>
-            <RoundedInput label={"Email"} type={"Text"} placeholder={"Email"} isPassword={false} />
-            <RoundedInput label={"Mot de passe"} type={"password"} placeholder={"Mot de passe"} isPassword={true} />
+            <RoundedInput label={"Email"} type={"text"} placeholder={"Email"} isPassword={false} />
+            <div className="Password-wrapper">
+              <RoundedInput label={"Mot de passe"} type={"password"} placeholder={"Mot de passe"} isPassword={true} />
+              <a href="#" className="Forgot-password">Mot de passe oublié ?</a>
+            </div>
             <Button children={"Connexion"} size={"slim"} />
           </form>
         </div>
@@ -24,6 +27,7 @@ function LoginPage() {
     </>
   );
 }
+
 
 
 export default LoginPage;

@@ -1,3 +1,4 @@
+@import '../../assets/styles/tokens.css';
 .Login-container {
   display: flex;
   flex-direction: row-reverse;
@@ -16,12 +17,29 @@
 .Login-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 50%;
-  padding: 40px;
+  justify-content: center; 
+  align-items: center;   
+  width: 100%;
+  height: 100%;          
+  padding: 10px;
   box-sizing: border-box;
 }
+label {
+  display: block;
+  text-align: left; 
+  margin-bottom: 5px;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%; 
+  max-width: 400px; 
+  text-align: center;
+}
+
 
 h1 {
   font-size: var(--font-title-l);
@@ -30,12 +48,22 @@ h1 {
   color: var(--color-dark-pink-600);
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.Password-wrapper {
+  position: relative;
+  text-align: right;
   width: 100%;
 }
+
+.Forgot-password {
+  margin-top: 5px;
+  font-size: var(--font-body-xs);
+  font-family: var(--font-family-primary);
+  color: var(--color-dark-brown-400);
+  text-decoration: underline;
+  display: inline-block;
+  cursor: pointer;
+}
+
 
 /* Responsive  */
 @media (max-width: 425px) {
