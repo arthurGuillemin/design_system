@@ -15,8 +15,8 @@ function LoginPage() {
         <div className="Login-content">
           <h1>Connectez-vous</h1>
           <form>
-            <RoundedInput label={"Email"} type={"Text"} isPassword={false} />
-            <RoundedInput label={"Mot de passe"} type={"password"} isPassword={true} />
+            <RoundedInput label={"Email"} type={"Text"} placeholder={"Email"} isPassword={false} />
+            <RoundedInput label={"Mot de passe"} type={"password"} placeholder={"Mot de passe"} isPassword={true} />
             <Button children={"Connexion"} size={"slim"} />
           </form>
         </div>
