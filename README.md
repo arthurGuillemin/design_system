@@ -32,7 +32,7 @@ Membres du groupe :
 2. Accédez au répertoire du projet :
 
     ```bash
-    cd Design_system
+    cd DesignSystem
     ```
 
 3. Installez les dépendances :
