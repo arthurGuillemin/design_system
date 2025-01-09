@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Dropdown.module.css"; 
+import IconButton from "../IconBtn/IconButton";  
+
 
 
 const Dropdown = () => {
@@ -12,12 +14,17 @@ const Dropdown = () => {
   return (
     <div className={styles["dropdown-container"]}>
       <button className={styles["dropdown-button"]} onClick={toggleDropdown}>
-        test
+      <IconButton 
+        type="arrow" 
+        alt="Dropdown Arrow" 
+        onClick={toggleDropdown} 
+        isActive={isOpen} 
+      />
       </button>
 
       {isOpen && (
         <ul className={styles["dropdown-list"]}>
-          {['mon panier', 'parametre', 'aides & contact'].map((item) => (
+          {['Mon panier', 'Paramètre', 'Aides & contact'].map((item) => (
             <li
               key={item}
               className={styles["dropdown-list-item"]}
