@@ -1,0 +1,43 @@
+@import '../../assets/styles/tokens.css';
+.Login-container {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-light-brown-100);
+}
+
+.Login-container img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Login-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: var(--font-title-l);
+  font-family: var(--font-family-primary);
+  margin-bottom: 20px;
+  color: var(--color-dark-pink-600);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+
+
+

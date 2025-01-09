@@ -13,7 +13,8 @@ const RoundedInput = ({
 }) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
-  const togglePasswordVisibility = () => {
+  const togglePasswordVisibility = (event) => {
+    event.preventDefault();
     setPasswordVisible(!passwordVisible);
   };
 
