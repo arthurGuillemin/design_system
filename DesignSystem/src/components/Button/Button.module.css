@@ -8,10 +8,10 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Centre le contenu du bouton */
   padding: 0 var(--spacing-8); /* Padding horizontal */
   transition: background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-
+  text-align: center;
 }
 
 /* Variantes spécifiques */
@@ -25,14 +25,21 @@
 }
 
 .active {
-  background-color: var(--color-light-brown-200);
-  color: var(--color-dark-pink-600);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-dark-pink-500);
+  color: var(--color-dark-pink-500);
 }
 
 .focus {
-  background-color: var(--color-dark-pink-600);
-  border: 2px solid var(--color-black);
-  color: var(--color-white);
+  border: 2px solid var(--color-dark-pink-500);
+  box-shadow: 0 0 0 3px var(--color-dark-pink-300);
+  color: var(--color-dark-pink-500);
+}
+
+.disabled {
+  background-color: var(--color-gray-400);
+  color: var(--color-gray-600);
+  cursor: not-allowed;
 }
 
 /* Tailles */
@@ -45,10 +52,42 @@
 .large {
   height: var(--spacing-20); /* Hauteur pour les boutons "large" */
   font-size: var(--font-body-l);
+  border-radius: 10px;
 }
 
-/* Icônes */
-.icon {
-  font-size: var(--font-body-m);
-  margin-left: var(--spacing-5); /* Espacement entre texte et icône */
+/* Largeur */
+.full-width {
+  width: 100%;
+}
+
+.medium-width {
+  width: 200px;
+}
+
+.small-width {
+  width: 100px;
+}
+
+/* Icône sur la droite */
+.button-icon {
+  display: flex;
+  align-items: center;
+  margin-left: var(--spacing-5); /* Espacement entre le texte et l'icône */
+}
+
+
+/* Gestion des cas où il n'y a pas d'icône */
+.button > .label {
+  margin-left: 0; /* Pas d'espacement inutile si l'icône est absente */
+  margin-right: 0;
+}
+
+/* Transitions */
+.button:hover:not(.disabled) {
+  filter: brightness(1.1);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-dark-pink-300);
 }

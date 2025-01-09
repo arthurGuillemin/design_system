@@ -1,45 +1,55 @@
 import React from 'react';
 import Button from './Button';
+import IconButton from '../IconBtn/IconButton'; // Exemple d'icône personnalisée
 
 export default {
   title: 'Components/Button',
   component: Button,
   argTypes: {
-    children: { control: 'text', defaultValue: 'Label' },
-    variant: { 
-      control: { type: 'radio' }, 
-      options: ['default', 'active', 'focus'], 
-      defaultValue: 'default' 
-    },
-    size: { 
-      control: { type: 'radio' }, 
-      options: ['slim', 'large'], 
-      defaultValue: 'slim' 
-    },
-    width: { 
-      control: { type: 'radio' }, 
-      options: ['full-width', 'medium-width', 'small-width'], 
-      defaultValue: 'medium-width' 
-    },
+    children: { control: 'text', defaultValue: 'Button Label' },
+    variant: { control: 'radio', options: ['default', 'active', 'focus'] },
+    size: { control: 'radio', options: ['slim', 'large'] },
     disabled: { control: 'boolean', defaultValue: false },
-    icon: { control: 'text', defaultValue: '➤' },
+    icon: { control: false },
   },
 };
 
 const Template = (args) => <Button {...args} />;
 
-export const Slim = Template.bind({});
-Slim.args = {
-  children: 'Label',
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Default Button',
   variant: 'default',
   size: 'slim',
-  icon: '➤',
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  children: 'Label',
-  variant: 'default',
+export const Active = Template.bind({});
+Active.args = {
+  children: 'Active Button',
+  variant: 'active',
   size: 'large',
-  icon: '➤',
+};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  children: 'Button with Icon',
+  variant: 'default',
+  size: 'slim',
+  icon: <IconButton type="arrow" alt="Arrow Icon" />,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: 'Disabled Button',
+  variant: 'default',
+  size: 'slim',
+  disabled: true,
+};
+
+export const LargeWithIcon = Template.bind({});
+LargeWithIcon.args = {
+  children: 'Large Button',
+  variant: 'active',
+  size: 'large',
+  icon: <IconButton type="account" alt="Account Icon" />,
 };
