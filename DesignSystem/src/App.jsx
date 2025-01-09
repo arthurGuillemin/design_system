@@ -1,14 +1,13 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from '../src/Pages/Home/Home';
+import React from "react";
+import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+    <div>
+      {/* Appelle directement la page ProfilePage */}
+      <ProfilePage />
+    </div>
   );
-}
+};
 
 export default App;

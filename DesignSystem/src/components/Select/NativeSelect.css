@@ -1,0 +1,65 @@
+:root {
+  --color-border: #8a6161;
+  --color-bg: #fae6e7;
+  --color-placeholder: #a47979;
+  --color-selected: #c23350;
+  --color-text: #8a6161;
+  --color-white: #ffffff;
+
+  --font-family: 'Lucida Grande', sans-serif;
+  --font-size: 16px;
+
+  --padding: 12px;
+  --border-radius: 12px;
+  --arrow-size: 10px;
+}
+
+/* Container */
+.native-select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Label */
+.native-select-label {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--color-text);
+}
+
+/* Native Select */
+.native-select {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  padding: var(--padding);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath fill='%238a6161' d='M0 0l5 5 5-5H0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--padding);
+  background-size: var(--arrow-size);
+  cursor: pointer;
+}
+
+/* Placeholder Styling */
+.native-select option[value=""] {
+  color: var(--color-placeholder);
+}
+
+/* Focus */
+.native-select:focus {
+  border-color: var(--color-selected);
+  outline: none;
+}
+
+/* Selected Option Styling */
+.native-select option:checked {
+  background-color: var(--color-bg);
+  color: var(--color-selected);
+}

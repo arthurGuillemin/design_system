@@ -1,42 +1,244 @@
-@import '../../assets/styles/tokens.css';
-
-.header {
+/* Full-screen container */
+.profileContainer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: var(--color-light-brown-200);
-    padding: var(--spacing-8) var(--spacing-12);
-    border-radius: var(--spacing-3);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh; /* Full-screen height */
+    background-color: #fff6f6;
+    font-family: 'Lucida Grande', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Header */
+  .header {
+    width: 100%;
+    text-align: center;
+    background-color: #fae6e7;
+    padding: 20px;
+    margin-bottom: 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .logoContainer {
+  .header h1 {
+    color: #c23350;
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  /* Content wrapper for centering form and profile */
+  .contentWrapper {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: auto;
+    height: auto;
   }
   
-  .logo {
-    width: 40px;
-    height: 40px;
-    margin-right: var(--spacing-3);
+  /* Profile Card */
+  .profileCard {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
   }
   
-  .title {
-    font-family: var(--font-family-tertiary);
-    font-size: var(--font-title-m);
-    font-weight: var(--font-weight-semi-bold);
-    color: var(--color-dark-pink-600);
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    border: 3px solid #fae6e7;
   }
   
-  .accountContainer {
+  .name {
+    font-size: 1.8rem;
+    color: #8a6161;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .info {
+    font-size: 1rem;
+    color: #a47979;
+    margin-bottom: 10px;
+  }
+  
+  /* Form */
+  .form {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    gap: 20px;
   }
   
-  .accountIcon {
-    width: 32px;
-    height: 32px;
+  .formGroup {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup label {
+    font-size: 1rem;
+    color: #8a6161;
+    margin-bottom: 5px;
+  }
+  
+  .formGroup input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #c23350;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #8a6161;
+  }
+  
+  .formGroup input:focus {
+    outline: none;
+    border-color: #e15c7c;
+    box-shadow: 0 0 8px rgba(225, 92, 124, 0.5);
+  }
+  
+  /* Buttons */
+  .button {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    background-color: #e15c7c;
+    color: white;
     cursor: pointer;
-    color: var(--color-dark-brown-400);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #c23350;
+  }
+  
+  /* Delete Section */
+  .deleteSection {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .deleteSection p {
+    font-size: 0.9rem;
+    color: #8a6161;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .deleteButton {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .deleteButton:hover {
+    background-color: #c23350;
+  }
+  
+  /* Responsive Design */
+  
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .contentWrapper {
+      max-width: 90%;
+      padding: 20px;
+    }
+  
+    .formGroup input {
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+  
+    .button,
+    .deleteButton {
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+  
+    .header h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .contentWrapper {
+      max-width: 95%;
+      padding: 15px;
+    }
+  
+    .avatar {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .formGroup input {
+      padding: 10px;
+      font-size: 0.85rem;
+    }
+  
+    .button,
+    .deleteButton {
+      padding: 10px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* Small Mobile */
+  @media (max-width: 480px) {
+    .contentWrapper {
+      padding: 10px;
+    }
+  
+    .avatar {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .formGroup input {
+      padding: 8px;
+      font-size: 0.8rem;
+    }
+  
+    .button,
+    .deleteButton {
+      padding: 8px;
+      font-size: 0.8rem;
+    }
   }
   

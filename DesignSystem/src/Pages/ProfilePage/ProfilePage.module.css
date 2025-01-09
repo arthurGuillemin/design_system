@@ -1,0 +1,240 @@
+:root {
+  /* Tokens */
+  --color-primary: #c23350;
+  --color-primary-hover: #e15c7c;
+  --color-background: #fff6f6;
+  --color-text: #8a6161;
+  --color-text-light: #a47979;
+  --font-primary: 'Lucida Grande', sans-serif;
+  --font-size-title: 2.5rem;
+  --font-size-body: 1rem;
+  --spacing-large: 40px;
+  --spacing-medium: 20px;
+  --spacing-small: 10px;
+}
+
+/* Conteneur principal */
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-background);
+  font-family: var(--font-primary);
+  padding: var(--spacing-large) var(--spacing-medium);
+  box-sizing: border-box;
+}
+
+/* En-tête */
+.header {
+  text-align: center;
+  background-color: var(--color-background);
+  width: 100%;
+  margin-bottom: var(--spacing-large);
+}
+
+.header h1 {
+  color: var(--color-primary);
+  font-size: var(--font-size-title);
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Carte profil */
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-small);
+  margin-bottom: var(--spacing-medium);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--color-primary);
+  object-fit: cover;
+  margin-bottom: var(--spacing-medium);
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.info {
+  font-size: var(--font-size-body);
+  color: var(--color-text-light);
+}
+
+/* Formulaire */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  width: 100%;
+  max-width: 600px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.formGroup label {
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+}
+
+.formGroup input {
+  padding: var(--spacing-medium);
+  font-size: var(--font-size-body);
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  background-color: white;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--color-primary-hover);
+  box-shadow: 0 0 5px rgba(225, 92, 124, 0.5);
+}
+
+/* Bouton Sauvegarder */
+.button {
+  width: 100%;
+  padding: var(--spacing-medium);
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Section Supprimer */
+.deleteSection {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin-top: var(--spacing-medium);
+}
+
+.deleteSection p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-small);
+}
+
+.deleteButton {
+  width: 100%;
+  padding: var(--spacing-medium);
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.deleteButton:hover {
+  background-color: #c23350;
+}
+
+/* Responsive Adjustments */
+
+/* Grand écran (Desktop 1200px+) */
+@media (min-width: 1200px) {
+  .profileContainer {
+    padding: 60px; /* Increase padding for large screens */
+  }
+
+  .contentWrapper {
+    max-width: 1000px; /* More width available on desktop */
+  }
+
+  .avatar {
+    width: 150px; /* Bigger avatar */
+    height: 150px;
+  }
+
+  .button {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+}
+
+/* Tablettes (768px - 1024px) */
+@media (max-width: 1024px) {
+  .contentWrapper {
+    max-width: 90%; /* Adjust width for tablets */
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .button {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+}
+
+/* Mobiles (480px - 768px) */
+@media (max-width: 768px) {
+  .contentWrapper {
+    max-width: 95%; /* Take almost full width on mobile */
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .formGroup input {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* Petits Mobiles (<480px) */
+@media (max-width: 480px) {
+  .contentWrapper {
+    max-width: 100%;
+    padding: 10px; /* Reduce padding */
+  }
+
+  .avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+}
