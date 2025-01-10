@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import imgLogin from '../../assets/img/imgLogin.png'
+import imgLogin from '../../assets/img/ImgLogin.png'
 import '../../assets/styles/tokens.css'
 import './Login.css'
 import RoundedInput from '../../components/FormInput/RoundedInput';
