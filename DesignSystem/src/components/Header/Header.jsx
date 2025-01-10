@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./Header.module.css";
 import IconButton from "../IconBtn/IconButton";
 import Dropdown from "../Dropdown/Dropdown";
+import logo from "../../assets/img/logo.svg";
 
-const Header = ({ logo, title, onAccountClick }) => {
+const Header = ({ title, onAccountClick }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => setDropdownOpen(!isDropdownOpen);
@@ -22,7 +23,9 @@ const Header = ({ logo, title, onAccountClick }) => {
           size="small"
           onClick={toggleDropdown}
         />
-        <Dropdown className={`${styles.dropdown} ${isDropdownOpen ? 'show' : ''}`} />
+        <Dropdown
+          className={`${styles.dropdown} ${isDropdownOpen ? "show" : ""}`}
+        />
       </div>
     </header>
   );
@@ -41,4 +44,3 @@ Header.defaultProps = {
 };
 
 export default Header;
-

@@ -47,13 +47,9 @@
   width: 30%;
   height: 2px;
   background-color: var(--color-black);
-  margin: 30px 10px 0;
+  margin-top: 20px;
 }
 
-.home-button {
-  margin-left: 10%;
-  margin-top: 50px;
-}
 
 @media (max-width: 768px) {
   .home-image {
