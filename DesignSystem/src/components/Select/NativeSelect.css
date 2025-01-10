@@ -1,6 +1,5 @@
 :root {
   --color-border: #8a6161;
-  --color-border-active: #e15c7c; /* Add a highlight color for active state */
   --color-bg: #fae6e7;
   --color-placeholder: #a47979;
   --color-selected: #c23350;
@@ -12,7 +11,7 @@
 
   --padding: 12px;
   --border-radius: 12px;
-  --arrow-size: 10px;
+  --icon-size: 16px;
 }
 
 /* Container */
@@ -27,6 +26,37 @@
   font-family: var(--font-family);
   font-size: var(--font-size);
   color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+/* Wrapper for select and icon */
+.native-select-wrapper {
+  position: relative;
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Focus effect */
+.native-select-wrapper:focus-within {
+  border-color: var(--color-selected);
+  box-shadow: 0 0 5px rgba(194, 51, 80, 0.5);
+}
+
+/* Icon on top of the select */
+.native-select-icon {
+  position: absolute;
+  right: var(--padding); /* Align to the right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  pointer-events: none; /* Ensure it doesn't block interactions */
+  width: var(--icon-size); /* Icon width */
+  height: var(--icon-size); /* Icon height */
+  z-index: 1; /* Ensure it’s above the select */
 }
 
 /* Native Select */
@@ -34,38 +64,23 @@
   font-family: var(--font-family);
   font-size: var(--font-size);
   padding: var(--padding);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
-  background-color: var(--color-white);
+  padding-right: calc(var(--padding) + var(--icon-size) + 8px); /* Add space for the icon */
+  border: none;
+  background-color: transparent;
   color: var(--color-text);
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath fill='%238a6161' d='M0 0l5 5 5-5H0z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right var(--padding);
-  background-size: var(--arrow-size);
+  width: 100%; /* Span full width */
+  height: 100%; /* Span full height */
+  outline: none;
+  z-index: 0; /* Ensure it’s below the icon */
   cursor: pointer;
-  transition: border-color 0.3s ease;
 }
 
 /* Placeholder Styling */
 .native-select option[value=""] {
   color: var(--color-placeholder);
-}
-
-/* Focus */
-.native-select:focus {
-  outline: none;
-}
-
-/* Active Border when Placeholder is Shown */
-.native-select-container.inactive .native-select {
-  border-color: var(--color-border); /* Normal border color */
-}
-
-.native-select-container.active .native-select {
-  border-color: var(--color-border-active); /* Active border color */
 }
 
 /* Selected Option Styling */

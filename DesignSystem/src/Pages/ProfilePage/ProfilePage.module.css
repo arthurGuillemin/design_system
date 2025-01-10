@@ -2,7 +2,7 @@
 
 /* Conteneur principal */
 .profileContainer {
-  display: block;
+  display: blcok ;
   flex-direction: column;
   justify-content: flex-start; /* Aligner les éléments en haut de la page */
   align-items: center;
@@ -75,6 +75,7 @@
   font-size: var(--font-body-s);
   color: var(--color-dark-brown-400);
   margin-bottom: var(--spacing-5);
+  padding: 500px;
 }
 
 .deleteButton {
