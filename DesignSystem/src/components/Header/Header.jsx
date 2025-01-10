@@ -1,33 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import './Header.css';
+import styles from './Header.module.css';
+import IconButton from '../IconBtn/IconButton';
+import Logo from '../../assets/icons/Logo.svg'
 
-const Header = ({ logo, title, icon, onIconClick }) => {
+const Header = () => {
   return (
-    <header className="header-container">
-      {/* Left Section: Logo and Title */}
-      <div className="header-left">
-        <img src={logo} alt="Logo" className="header-logo" />
-        <h1 className="header-title">{title}</h1>
+    <header className={styles.header}>
+      <div className={styles.logoContainer}>
+        <img src={Logo}></img>
+        <h1 className={styles.title}>BLOOM</h1>
       </div>
-
-      {/* Right Section: Icon */}
-      <div className="header-right" onClick={onIconClick}>
-        <img src={icon} alt="User Icon" className="header-icon" />
+      <div className={styles.accountContainer}>
+        <IconButton type={"account"}/>
       </div>
     </header>
   );
-};
-
-Header.propTypes = {
-  logo: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  onIconClick: PropTypes.func,
-};
-
-Header.defaultProps = {
-  onIconClick: () => {},
 };
 
 export default Header;
