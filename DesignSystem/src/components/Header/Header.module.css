@@ -45,13 +45,3 @@ h1{
   margin-right: 2rem;
   justify-content: flex-end;
 }
-
-.account {
-  position: absolute;
-  z-index: 15;
-  margin-right: -100px;
-}
-.dropdown {
-  position: absolute;
-  z-index: 0;
-}

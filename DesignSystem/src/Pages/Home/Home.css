@@ -50,8 +50,8 @@
   margin: 30px 10px 0;
 }
 
-Button {
-  margin-left: 180px;
+.home-button {
+  margin-left: 10%;
   margin-top: 50px;
 }
 
@@ -80,8 +80,8 @@ Button {
     width: 20%;
   }
 
-  Button {
-    margin-left: 100px;
+  .home-button{
+    margin-left: 90px;
     margin-top: 20px;
     font-size: 0.8rem;
     padding: 8px 12px;
