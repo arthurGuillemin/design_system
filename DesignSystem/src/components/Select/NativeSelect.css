@@ -1,5 +1,6 @@
 :root {
   --color-border: #8a6161;
+  --color-border-active: #e15c7c; /* Add a highlight color for active state */
   --color-bg: #fae6e7;
   --color-placeholder: #a47979;
   --color-selected: #c23350;
@@ -45,6 +46,7 @@
   background-position: right var(--padding);
   background-size: var(--arrow-size);
   cursor: pointer;
+  transition: border-color 0.3s ease;
 }
 
 /* Placeholder Styling */
@@ -54,8 +56,16 @@
 
 /* Focus */
 .native-select:focus {
-  border-color: var(--color-selected);
   outline: none;
+}
+
+/* Active Border when Placeholder is Shown */
+.native-select-container.inactive .native-select {
+  border-color: var(--color-border); /* Normal border color */
+}
+
+.native-select-container.active .native-select {
+  border-color: var(--color-border-active); /* Active border color */
 }
 
 /* Selected Option Styling */

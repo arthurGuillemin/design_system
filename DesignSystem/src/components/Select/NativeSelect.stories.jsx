@@ -21,16 +21,16 @@ const Template = (args) => <NativeSelect {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: 'Choose a Pet:',
-  name: 'pets',
-  id: 'pets-select',
+  label: 'Security question:',
+  name: 'Questions',
+  id: 'Question-select',
   options: [
-    { value: 'dog', label: 'Dog' },
-    { value: 'cat', label: 'Cat' },
-    { value: 'hamster', label: 'Hamster' },
-    { value: 'parrot', label: 'Parrot' },
-    { value: 'spider', label: 'Spider' },
-    { value: 'goldfish', label: 'Goldfish' },
+    { value: 'What is your mother’s maiden name?', label: 'What is your mother’s maiden name? ? ' },
+    { value: 'What was the name of your first pet?', label: 'What was the name of your first pet?' },
+    { value: 'What was your childhood nickname?', label: 'What was your childhood nickname?' },
+    { value: 'What is the name of your favorite teacher?', label: 'What is the name of your favorite teacher?' },
+    { value: 'In what city were you born ?', label: 'In what city were you born?' },
+    { value: 'What is the name of the street you grew up on?', label: 'What is the name of the street you grew up on?' },
   ],
   value: '',
   placeholder: '--Please choose an option--',

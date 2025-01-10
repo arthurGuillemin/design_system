@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NativeSelect.css";
 
-const NativeSelect = ({ label, placeholder, options, value, onChange }) => {
+const NativeSelect = ({ label, placeholder, options, onChange }) => {
+  const [selectedValue, setSelectedValue] = useState("");
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    setSelectedValue(value); // Update the selected value
+    onChange(value); // Pass the selected value to the parent component
+  };
+
   return (
     <div className="native-select-container">
       {label && (
@@ -12,8 +20,8 @@ const NativeSelect = ({ label, placeholder, options, value, onChange }) => {
       <select
         id="native-select"
         className="native-select"
-        value={value}
-        onChange={onChange}
+        value={selectedValue}
+        onChange={handleChange}
       >
         <option value="" disabled>
           {placeholder}

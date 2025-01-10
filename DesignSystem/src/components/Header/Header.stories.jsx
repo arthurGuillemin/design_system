@@ -1,18 +1,13 @@
-import React from 'react';
-import Header from './Header/Header.module.css';
-
-// Example of local asset imports (replace with correct paths if necessary)
-import logo from '../../assets/logo.png'; // Replace with your actual logo path
-import icon from '../../assets/user-icon.png'; // Replace with your actual icon path
+import React from "react";
+import Header from "./Header";
 
 export default {
-  title: 'Components/Header',
+  title: "Components/Header",
   component: Header,
   argTypes: {
-    logo: { control: 'text' },
-    title: { control: 'text' },
-    icon: { control: 'text' },
-    onIconClick: { action: 'Icon clicked!' },
+    title: { control: "text" },
+    logo: { control: "text" },
+    children: { control: "text" },
   },
 };
 
@@ -20,7 +15,14 @@ const Template = (args) => <Header {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  logo: 'https://via.placeholder.com/48', // Replace with 'logo' for local assets
-  title: 'BLOOM',
-  icon: 'https://via.placeholder.com/32', // Replace with 'icon' for local assets
+  title: "My Header",
+  logo: "https://via.placeholder.com/150",
+  children: <button>Click Me</button>,
+};
+
+export const WithoutLogo = Template.bind({});
+WithoutLogo.args = {
+  title: "Header Without Logo",
+  logo: "",
+  children: <button>Click Me</button>,
 };
