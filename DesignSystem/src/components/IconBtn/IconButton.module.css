@@ -11,7 +11,15 @@
 }
 
 .icon-image {
+  object-fit: contain;
+}
+
+.icon-button.large .icon-image {
   width: 64px;
   height: 64px;
-  object-fit: contain;
+}
+
+.icon-button.small .icon-image {
+  width: 32px;
+  height: 32px;
 }

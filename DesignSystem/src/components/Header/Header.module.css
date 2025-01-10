@@ -3,45 +3,76 @@
 * {
   padding: 0;
   margin: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Aligne les sections gauche et droite */
+  align-items: center; /* Aligne les éléments verticalement */
   background-color: var(--color-light-brown-200);
-  margin: 0;
-  padding: 0;
+  padding: var(--spacing-6-5) var(--spacing-12);
+  border-bottom: 1px solid var(--color-dark-pink-500);
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
-  padding-left: 2rem;
+  gap: var(--spacing-6-5); /* Espacement entre l'image et le texte */
 }
-h1{
-  padding-left: 2rem;
-  font-size: var(  --font-title-thin);
-  color: var(--color-dark-pink-600);
-  font-weight: var(  --font-weight-light);
-  margin-top: 10%;
-}
+
 .logo {
-  padding: var(--spacing-3);
+  height: var(--spacing-13);
+  width: auto;
 }
 
 .title {
   font-family: var(--font-family-tertiary);
-  font-size: var(--font-title-l);
+  font-size: var(--font-title-thin);
   font-weight: var(--font-weight-light);
   color: var(--color-dark-pink-600);
 }
 
 .accountContainer {
+  display: absolute;
+  align-items: center; /* Aligne l'avatar et la flèche verticalement */
+  gap: var(--spacing-12);
+  margin-right: var(--spacing-18);
+  position: relative; /* Nécessaire pour positionner le dropdown */
+}
+
+.account {
   display: flex;
-  align-items: center;
-  position: relative;
-  margin-right: 2rem;
-  justify-content: flex-end;
+  align-items: center; /* Centre le contenu dans le bouton */
+  justify-content: center;
+  height: 48px; /* Taille fixe pour un alignement parfait */
+  width: 48px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + var(--spacing-3)); /* Place le dropdown sous l'avatar */
+  right: 0;
+  z-index: 1; /* Le dropdown s'affiche correctement */
+  background-color: var(--color-light-brown-100);
+  border: 1px solid var(--color-dark-pink-400);
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: var(--spacing-3) 0;
+  margin: 0;
+  display: none; /* Masque le dropdown par défaut */
+}
+
+.dropdown.show {
+  display: block; /* Affiche le dropdown lorsqu'il est actif */
+}
+
+.arrowIcon {
+  height: 32px; /* Ajuste la taille de la flèche */
+  width: 32px;
+  cursor: pointer;
 }
