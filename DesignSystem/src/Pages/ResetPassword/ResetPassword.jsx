@@ -5,7 +5,7 @@ import './ResetPassword.module.css'
 import RoundedInput from '../../components/FormInput/RoundedInput';
 import Button from '../../components/Button/Button';
 import Header from '../../components/Header/Header';
-
+import { Link } from 'react-router-dom';
 function ResetPassword() {
   return (
     <>
@@ -18,11 +18,12 @@ function ResetPassword() {
             <div className="Password-wrapper">
               <RoundedInput label={"Nouveau mot de passe"} type={"password"} placeholder={"Mot de passe"} isPassword={true} />
             </div>
+            <Link to={"/login"}>
             <Button children={"Modifier"} size={"slim"} />
+            </Link>
           </form>
         </div>
         <img src={imgLogin} alt="Background" />
-
       </div>
     </>
   );
