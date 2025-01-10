@@ -7,10 +7,10 @@
 }
 
 .inputLabel {
-  font-size: var(--font-title-thin);
-  font-family: var(--font-family-primary);
-  color: var(--color-dark-pink-600);
-  font-weight: 50;
+  font-size: var(--font-body-l);
+  font-family: var(--font-family-secondary);
+  color: var(--color-dark-brown-600);
+  font-weight: var(--font-weight-regular);
 }
 
 .inputWrapper {
