@@ -20,50 +20,62 @@ export default {
         type: 'text',
       },
     },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'large'],
+      },
+    },
     onClick: { action: 'clicked' },
   },
 };
 
 const Template = (args) => <IconButton {...args} />;
 
-export const AccountDefault = Template.bind({});
-AccountDefault.args = {
+export const SmallAccountIcon = Template.bind({});
+SmallAccountIcon.args = {
   type: 'account',
-  alt: 'Account Icon',
+  alt: 'Small Account Icon',
   isActive: false,
+  size: 'small',
 };
 
-export const AccountActive = Template.bind({});
-AccountActive.args = {
+export const LargeAccountIcon = Template.bind({});
+LargeAccountIcon.args = {
   type: 'account',
-  alt: 'Account Icon (Active)',
+  alt: 'Large Account Icon',
   isActive: true,
+  size: 'large',
 };
 
-export const ArrowDefault = Template.bind({});
-ArrowDefault.args = {
+export const SmallArrowIcon = Template.bind({});
+SmallArrowIcon.args = {
   type: 'arrow',
-  alt: 'Arrow Icon',
+  alt: 'Small Arrow Icon',
   isActive: false,
+  size: 'small',
 };
 
-export const ArrowActive = Template.bind({});
-ArrowActive.args = {
+export const LargeArrowIcon = Template.bind({});
+LargeArrowIcon.args = {
   type: 'arrow',
-  alt: 'Arrow Icon (Active)',
+  alt: 'Large Arrow Icon',
   isActive: true,
+  size: 'large',
 };
 
-export const PasswordDefault = Template.bind({});
-PasswordDefault.args = {
+export const SmallPasswordIcon = Template.bind({});
+SmallPasswordIcon.args = {
   type: 'password',
-  alt: 'Password Icon',
+  alt: 'Small Password Icon',
   isActive: false,
+  size: 'small',
 };
 
-export const PasswordActive = Template.bind({});
-PasswordActive.args = {
+export const LargePasswordIcon = Template.bind({});
+LargePasswordIcon.args = {
   type: 'password',
-  alt: 'Password Icon (Active)',
+  alt: 'Large Password Icon',
   isActive: true,
+  size: 'large',
 };

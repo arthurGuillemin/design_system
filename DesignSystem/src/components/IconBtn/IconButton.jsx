@@ -9,7 +9,7 @@ import PressedPasswordIcon from '../../assets/icons/Password-Visibility=Clicked.
 import PressedArrowIcon from '../../assets/icons/arrow_forward_ios.svg';
 import DefaultArrowIcon from '../../assets/icons/arrow_forward_ios2.svg';
 
-const IconButton = ({ type, alt, onClick, isActive }) => {
+const IconButton = ({ type, alt, onClick, isActive, size }) => {
   const [isPressed, setIsPressed] = useState(false);
 
   const iconSets = {
@@ -25,7 +25,7 @@ const IconButton = ({ type, alt, onClick, isActive }) => {
 
   return (
     <button
-      className={styles['icon-button']}
+      className={`${styles['icon-button']} ${styles[size]}`}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onClick={onClick}
@@ -44,6 +44,7 @@ IconButton.propTypes = {
   alt: PropTypes.string,
   onClick: PropTypes.func,
   isActive: PropTypes.bool,
+  size: PropTypes.oneOf(['small', 'large']),
 };
 
 IconButton.defaultProps = {
@@ -51,6 +52,7 @@ IconButton.defaultProps = {
   alt: 'Icon Button',
   onClick: () => {},
   isActive: false,
+  size: 'large',
 };
 
 export default IconButton;

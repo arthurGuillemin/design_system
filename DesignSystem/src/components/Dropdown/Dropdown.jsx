@@ -15,6 +15,7 @@ const Dropdown = () => {
         <IconButton
           type="arrow"
           alt="Dropdown Arrow"
+          size="small"
           onClick={toggleDropdown}
           isActive={isOpen}
         />
