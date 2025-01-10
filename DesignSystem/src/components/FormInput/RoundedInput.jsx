@@ -13,7 +13,8 @@ const RoundedInput = ({
 }) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
-  const togglePasswordVisibility = () => {
+  const togglePasswordVisibility = (event) => {
+    event.preventDefault();
     setPasswordVisible(!passwordVisible);
   };
 
@@ -24,7 +25,7 @@ const RoundedInput = ({
       <div className={styles.inputWrapper}>
         <div className={styles.inputField}>
           <input
-            type={isPassword && !passwordVisible ? 'password' : type}
+            type={isPassword && !passwordVisible ? 'password' : "text"}
             className={`${styles.roundedInput} ${error ? styles.inputError : ''}`}
             placeholder={placeholder}
           />

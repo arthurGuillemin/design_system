@@ -1,0 +1,108 @@
+@import '../../assets/styles/tokens.css';
+.Login-container {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-light-brown-100);
+}
+
+.Login-container img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Login-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;   
+  width: 100%;
+  height: 100%;          
+  padding: 10px;
+  box-sizing: border-box;
+}
+label {
+  display: block;
+  text-align: left; 
+  margin-bottom: 5px;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%; 
+  max-width: 400px; 
+  text-align: center;
+}
+
+
+h1 {
+  font-size: var(--font-title-l);
+  font-family: var(--font-family-primary);
+  margin-bottom: 20px;
+  color: var(--color-dark-pink-600);
+}
+
+.Password-wrapper {
+  position: relative;
+  text-align: right;
+  width: 100%;
+}
+
+.Forgot-password {
+  margin-top: 5px;
+  font-size: var(--font-body-xs);
+  font-family: var(--font-family-primary);
+  color: var(--color-dark-brown-400);
+  text-decoration: underline;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+/* Responsive  */
+@media (max-width: 425px) {
+  .Login-container {
+    flex-direction: column; 
+    justify-content: center;
+  }
+
+  .Login-container img {
+    display: none;
+  }
+
+  .Login-content {
+    width: 100%;
+    padding: 20px; 
+  }
+
+  h1 {
+    font-size: var(--font-title-m); 
+    text-align: center;
+    width: 100%;
+  }
+
+  form {
+    gap: 15px;
+    padding: 0; 
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: var(--font-title-s);
+  }
+
+  form {
+    gap: 10px;
+  }
+
+  .Login-content {
+    padding: 10px;
+  }
+}
