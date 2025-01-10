@@ -1,41 +1,55 @@
 @import "../../assets/styles/tokens.css";
 
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-light-brown-200);
-  padding: var(--spacing-8) var(--spacing-12);
-  border-radius: var(--spacing-3);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
+  padding-left: 2rem;
 }
-
+h1{
+  padding-left: 2rem;
+  font-size: var(  --font-title-thin);
+  color: var(--color-dark-pink-600);
+  font-weight: var(  --font-weight-light);
+}
 .logo {
-  width: 40px;
-  height: 40px;
-  margin-right: var(--spacing-3);
+  padding: var(--spacing-3);
 }
 
 .title {
   font-family: var(--font-family-tertiary);
-  font-size: var(--font-title-m);
-  font-weight: var(--font-weight-semi-bold);
+  font-size: var(--font-title-l);
+  font-weight: var(--font-weight-light);
   color: var(--color-dark-pink-600);
 }
 
 .accountContainer {
   display: flex;
   align-items: center;
+  position: relative;
+  margin-right: 2rem;
+  justify-content: flex-end;
 }
 
-.accountIcon {
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  color: var(--color-dark-brown-400);
+.account {
+  position: absolute;
+  z-index: 15;
+  margin-right: -100px;
+}
+.dropdown {
+  position: absolute;
+  z-index: 0;
 }
