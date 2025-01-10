@@ -24,10 +24,10 @@
 .home-presentation {
   position: absolute;
   top: 50%;
-  left: 2%;
+  left: 0;
   background-color: var(--color-light-brown-50);
   color: var(--color-black);
-  padding: 20px;
+  padding: 10px;
   border-radius: 0 10px 10px 0;
   text-align: center;
 }
@@ -37,6 +37,9 @@
   font-size: var(--font-title-thin);
   font-weight: var(--font-weight-thin);
   margin-bottom: 40px;
+  margin-left: 50px;
+  margin-right: 40px;
+  color: var(--color-black);
 }
 .home-presentation h1::after {
   content: "";
@@ -44,11 +47,11 @@
   width: 30%;
   height: 2px;
   background-color: var(--color-black);
-  margin: 30px 15px 0;
+  margin: 30px 10px 0;
 }
 
 Button {
-  margin-left: 190px;
+  margin-left: 180px;
   margin-top: 50px;
 }
 
@@ -58,6 +61,7 @@ Button {
     height: 100vh;
     object-fit: cover;
     object-position: center;
+    margin: 20px;
   }
 
   .home-presentation {
@@ -69,6 +73,7 @@ Button {
   .home-presentation h1 {
     font-size: calc(var(--font-title-thin) * 0.8);
     margin-bottom: 20px;
+    margin-left: 0;
   }
 
   .home-presentation h1::after {
@@ -76,7 +81,7 @@ Button {
   }
 
   Button {
-    margin-left: 50px;
+    margin-left: 100px;
     margin-top: 20px;
     font-size: 0.8rem;
     padding: 8px 12px;

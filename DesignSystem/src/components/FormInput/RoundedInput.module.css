@@ -8,14 +8,13 @@
 
 .inputLabel {
   font-size: var(--font-title-thin);
-  font-family: var(--font-family-primary); 
+  font-family: var(--font-family-primary);
   color: var(--color-dark-pink-600);
   font-weight: 50;
 }
 
 .inputWrapper {
   display: flex;
-  align-items: center;
   border: 1px solid var(--color-dark-brown-600);
   border-radius: 50px;
   background-color: var(--color-white);
@@ -30,7 +29,7 @@
 }
 
 .inputField {
-  flex: 1; 
+  flex: 1;
 }
 
 .roundedInput {
@@ -62,10 +61,11 @@
 .iconWrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px; 
+  justify-content: right;
+  width: 40px;
   height: 40px;
-  margin-right: var(--spacing-5);
+  margin-right:5%;
+  margin-top: -2%;
 }
 
 .iconWrapper button {

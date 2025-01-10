@@ -47,25 +47,15 @@
   height: var(--spacing-9); /* Hauteur pour les boutons "slim" */
   font-size: var(--font-body-s);
   border-radius: 50px;
+  width: 100%;
+  margin-left: 0;
 }
 
 .large {
   height: var(--spacing-20); /* Hauteur pour les boutons "large" */
   font-size: var(--font-body-l);
   border-radius: 10px;
-}
-
-/* Largeur */
-.full-width {
-  width: 100%;
-}
-
-.medium-width {
-  width: 200px;
-}
-
-.small-width {
-  width: 100px;
+  width: 75%;
 }
 
 /* Icône sur la droite */
