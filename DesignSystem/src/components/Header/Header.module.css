@@ -25,6 +25,7 @@ h1{
   font-size: var(  --font-title-thin);
   color: var(--color-dark-pink-600);
   font-weight: var(  --font-weight-light);
+  margin-top: 10%;
 }
 .logo {
   padding: var(--spacing-3);
